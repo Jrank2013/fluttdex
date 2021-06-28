@@ -1,5 +1,8 @@
+import 'package:dio/dio.dart';
 import 'package:fluttdex/pages/home_page.dart';
+import 'package:fluttdex/services/pokeapi_service.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +19,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: Provider(
+        create: (BuildContext context) {
+          PokeApiService(Dio());
+        },
+        child: const HomePage(),
+      ),
     );
   }
 }

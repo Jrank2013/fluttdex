@@ -31,12 +31,15 @@ dependencies:
   provider: ^5.0.0
   flutter_mobx: ^2.0.0
   dio: ^4.0.0
+  cached_network_image: ^3.0.0
+  build_runner: ^2.0.5
 
 dev_dependencies:
   flutter_lints: ^1.0.3
   flutter_test:
     sdk: flutter
   http_mock_adapter: ^0.3.1
+  mockito: ^5.0.10
   path: ^1.8.0
 
 # For information on the generic Dart part of this file, see the
