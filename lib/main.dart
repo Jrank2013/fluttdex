@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Provider(
-        create: (BuildContext context) {
-          PokeApiService(Dio());
-        },
+        create: (_) => PokeApiService(Dio()),
         child: const HomePage(),
       ),
     );
